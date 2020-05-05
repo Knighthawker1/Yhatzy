@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4F3EF3ED"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvRound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/rounds"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRoll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:text="@string/rollsRemaining"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivDice0"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="@string/defaultContentDesc"
+                app:layout_constraintEnd_toStartOf="@+id/ivDice1"
+                app:layout_constraintTop_toTopOf="@+id/ivDice2"
+                app:srcCompat="@drawable/dice_default" />
+
+            <ImageView
+                android:id="@+id/ivDice1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivDice2"
+                app:layout_constraintTop_toTopOf="@+id/ivDice2"
+                app:srcCompat="@drawable/dice_default"
+                android:contentDescription="@string/defaultContentDesc"/>
+
+            <ImageView
+                android:id="@+id/ivDice2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRound"
+                app:srcCompat="@drawable/dice_default"
+                android:contentDescription="@string/defaultContentDesc" />
+
+            <ImageView
+                android:id="@+id/ivDice3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintStart_toEndOf="@+id/ivDice2"
+                app:layout_constraintTop_toTopOf="@+id/ivDice2"
+                app:srcCompat="@drawable/dice_default"
+                android:contentDescription="@string/defaultContentDesc" />
+
+            <ImageView
+                android:id="@+id/ivDice4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintStart_toEndOf="@+id/ivDice3"
+                app:layout_constraintTop_toTopOf="@+id/ivDice2"
+                app:srcCompat="@drawable/dice_default"
+                android:contentDescription="@string/defaultContentDesc" />
+
+            <TextView
+                android:id="@+id/tvDice0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultDiceLabel"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/ivDice0"
+                app:layout_constraintStart_toStartOf="@+id/ivDice0"
+                app:layout_constraintTop_toTopOf="@+id/tvDice1" />
+
+            <TextView
+                android:id="@+id/tvDice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultDiceLabel"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/ivDice1"
+                app:layout_constraintStart_toStartOf="@+id/ivDice1"
+                app:layout_constraintTop_toTopOf="@+id/tvDice2" />
+
+            <TextView
+                android:id="@+id/tvDice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/defaultDiceLabel"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/ivDice2"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="@+id/ivDice2"
+                app:layout_constraintTop_toBottomOf="@+id/ivDice2" />
+
+            <TextView
+                android:id="@+id/tvDice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultDiceLabel"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/ivDice3"
+                app:layout_constraintStart_toStartOf="@+id/ivDice3"
+                app:layout_constraintTop_toTopOf="@+id/tvDice2" />
+
+            <TextView
+                android:id="@+id/tvDice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultDiceLabel"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/ivDice4"
+                app:layout_constraintStart_toStartOf="@+id/ivDice4"
+                app:layout_constraintTop_toTopOf="@+id/tvDice3" />
+
+            <CheckBox
+                android:id="@+id/cbDice0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvDice0"
+                app:layout_constraintStart_toStartOf="@+id/tvDice0"
+                app:layout_constraintTop_toTopOf="@+id/cbDice1" />
+
+            <CheckBox
+                android:id="@+id/cbDice1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvDice1"
+                app:layout_constraintStart_toStartOf="@+id/tvDice1"
+                app:layout_constraintTop_toTopOf="@+id/cbDice2" />
+
+            <CheckBox
+                android:id="@+id/cbDice2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvDice2"
+                app:layout_constraintStart_toStartOf="@+id/tvDice2"
+                app:layout_constraintTop_toBottomOf="@+id/tvDice2" />
+
+            <CheckBox
+                android:id="@+id/cbDice3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvDice3"
+                app:layout_constraintStart_toStartOf="@+id/tvDice3"
+                app:layout_constraintTop_toTopOf="@+id/cbDice2" />
+
+            <CheckBox
+                android:id="@+id/cbDice4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvDice4"
+                app:layout_constraintStart_toStartOf="@+id/tvDice4"
+                app:layout_constraintTop_toTopOf="@+id/cbDice3" />
+
+            <Button
+                android:id="@+id/btnRollAll"
+                android:layout_width="123dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/buttonRollAll"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/cbDice2"
+                app:layout_constraintTop_toBottomOf="@+id/cbDice2" />
+
+            <Button
+                android:id="@+id/btnRollSelected"
+                android:layout_width="123dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:enabled="false"
+                android:text="@string/buttonRollSelected"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/cbDice2"
+                app:layout_constraintTop_toBottomOf="@+id/cbDice2" />
+
+            <Button
+                android:id="@+id/btnScore"
+                android:layout_width="123dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:enabled="false"
+                android:text="@string/buttonScore"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnRollAll"
+                app:layout_constraintTop_toBottomOf="@+id/btnRollAll" />
+
+            <Button
+                android:id="@+id/btnRules"
+                android:layout_width="123dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/buttonRules"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/btnRollSelected"
+                app:layout_constraintTop_toBottomOf="@+id/btnRollSelected" />
+
+            <RadioGroup
+                android:id="@+id/rgCategory"
+                android:layout_width="129dp"
+                android:layout_height="391dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintEnd_toEndOf="@+id/btnScore"
+                app:layout_constraintTop_toBottomOf="@+id/btnScore">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:gravity="center"
+                    android:text="@string/upperSection" />
+
+                <RadioButton
+                    android:id="@+id/rbOnes"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:enabled="true"
+                    android:text="@string/Ones" />
+
+                <RadioButton
+                    android:id="@+id/rbTwos"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/Twos" />
+
+                <RadioButton
+                    android:id="@+id/rbThrees"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/Threes" />
+
+                <RadioButton
+                    android:id="@+id/rbFours"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/Fours" />
+
+                <RadioButton
+                    android:id="@+id/rbFives"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/Fives" />
+
+                <RadioButton
+                    android:id="@+id/rbSixes"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/Sixes" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:gravity="center"
+                    android:text="@string/lowerSection" />
+
+                <RadioButton
+                    android:id="@+id/rbThreeKind"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/ThreeKind" />
+
+                <RadioButton
+                    android:id="@+id/rbFourKind"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/FourKind" />
+
+                <RadioButton
+                    android:id="@+id/rbFullHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/FullHouse" />
+
+                <RadioButton
+                    android:id="@+id/rbSmallStraight"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/SmallStraight" />
+
+                <RadioButton
+                    android:id="@+id/rbLargeStraight"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/LargeStraight" />
+
+                <RadioButton
+                    android:id="@+id/rbFiveKind"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/FiveKind" />
+
+                <RadioButton
+                    android:id="@+id/rbChance"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/Chance" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/btnRules"
+                app:layout_constraintTop_toTopOf="@+id/rgCategory">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:gravity="center"
+                    android:text="@string/scores" />
+
+                <TextView
+                    android:id="@+id/tvOnesScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvTwosScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvThreesScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvFoursScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvFivesScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvSixesScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvThreeKindScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvFourKindScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvFullHouseScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvSmallStraightScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvLargeStraightScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvFiveKindScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+                <TextView
+                    android:id="@+id/tvChanceScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="@string/defaultScore" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

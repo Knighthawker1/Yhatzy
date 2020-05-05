@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Yhatzy Dice Game</string>
+    <string name="mainTitle">Select Your Dice</string>
+    <string name="hintCustom">Custom</string>
+    <string name="buttonRoll">Roll</string>
+    <string name="buttonHistory">History</string>
+    <string name="buttonClear">Clear</string>
+    <string name="rounds">Round 0 of 13</string>
+    <string name="rollsRemaining">3 Rolls Remaining</string>
+    <string name="buttonRollSelected">Roll Selected</string>
+    <string name="buttonRollAll">Roll All</string>
+    <string name="buttonScore">Score</string>
+    <string name="buttonRules">Rules</string>
+    <string name="Ones">Ones</string>
+    <string name="Twos">Twos</string>
+    <string name="Threes">Threes</string>
+    <string name="Fours">Fours</string>
+    <string name="Fives">Fives</string>
+    <string name="Sixes">Sixes</string>
+    <string name="ThreeKind">Three of a Kind</string>
+    <string name="FourKind">Four of a Kind</string>
+    <string name="FullHouse">Full House</string>
+    <string name="SmallStraight">Small Straight</string>
+    <string name="LargeStraight">Large Straight</string>
+    <string name="FiveKind">Five of a Kind</string>
+    <string name="Chance">Chance</string>
+    <string name="upperSection">Upper Section</string>
+    <string name="lowerSection">Lower Section</string>
+    <string name="scores">Scores</string>
+    <string name="defaultScore">00</string>
+    <string name="finalScore">Final Score</string>
+    <string name="newGame">New Game</string>
+    <string name="highScore">High Score</string>
+    <string name="defaultDiceLabel">\?</string>
+    <string name="defaultContentDesc">Dice not yet rolled.</string>
+</resources>
